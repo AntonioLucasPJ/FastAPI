@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/home")
 def home():
-    dados = pd.read_excel("teste.xlsx")    
+    dados = pd.read_excel("Gratuidade SENAI.xlsx")    
     dados = dados.to_json(orient="records")
     dados = json.loads(dados)
     return dados
